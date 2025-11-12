@@ -4,16 +4,16 @@ import streamlit as st
 from groq import Groq
 
 st.set_page_config(page_title="Mi chat de IA", page_icon="👍")
-st.title("Mi primera aplicacion con Streamlit")
+st.title("Chat JPGPT")
 
 nombre = st.text_input("Cual es tu nombre?")
 if st.button("Saludar!"):
-    st.write(f"Hola {nombre}! Bienvenido a talento tech")
+    st.write(f"Hola {nombre}! Bienvenido")
 
 MODELOS = ['llama-3.1-8b-instant', 'llama-3.3-70b-versatile', 'deepseek-r1-distill-llama-70b']
 
 def configurar_pagina():
-    st.title("Mi Chat de IA - Talento Tech")
+    st.title("Todo el chat")
     st.sidebar.title("Configuracion de la IA")
 
     elegirModelo = st.sidebar.selectbox(
@@ -95,4 +95,5 @@ if __name__ == "__main__":
 # mensaje = st.chat_input("Escribi tu mensaje:")
 
 # Correr streamlit con la terminal de Python
+
 # python -m streamlit run MiChat.py (aca deben ingresar el nombre del archivo)
